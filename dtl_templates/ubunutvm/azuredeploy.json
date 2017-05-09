@@ -4,15 +4,15 @@
   "parameters": {
     "newVMName": {
       "type": "string",
-      "defaultValue": "dtlubunt"
+      "defaultValue": "myubuntu"
     },
     "labName": {
       "type": "string",
-      "defaultValue": "FabrikamDemoLab"
+      "defaultValue": "BensDevTestLab"
     },
     "size": {
       "type": "string",
-      "defaultValue": "Standard_A2"
+      "defaultValue": "Standard_DS1_v2"
     },
     "userName": {
       "type": "string",
@@ -37,11 +37,11 @@
       "location": "[resourceGroup().location]",
       "properties": {
         "labVirtualNetworkId": "[variables('labVirtualNetworkId')]",
-        "notes": "Ubuntu Server 12.04.5 LTS",
+        "notes": "Ubuntu Server 14.04 LTS",
         "galleryImageReference": {
           "offer": "UbuntuServer",
           "publisher": "Canonical",
-          "sku": "12.04.5-LTS",
+          "sku": "14.04.5-LTS",
           "osType": "Linux",
           "version": "latest"
         },
@@ -51,7 +51,7 @@
         "isAuthenticationWithSshKey": true,
         "labSubnetName": "[variables('labSubnetName')]",
         "disallowPublicIpAddress": true,
-        "storageType": "Standard",
+        "storageType": "Premium",
         "allowClaim": false,
         "networkInterface": {
           "sharedPublicIpAddressConfiguration": {
